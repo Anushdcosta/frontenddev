@@ -8,13 +8,13 @@
 </head>
 <body>
     <div style="display: flex;" id="regformarea">
-        <form>
+        <form id="regform">
             <h1>Register</h1>
             <label for="name">
                 <input type="text" id="name" name="name" placeholder="Name" required>
             </label>
             <label for="email">
-                <input type="text" id="email" name="email" placeholder="Email" required>
+                <input type="email" id="email" name="email" placeholder="Email" required>
             </label>
             <label for="password">
                 <input type="password" id="password" name="password" placeholder="Password" required>
@@ -22,41 +22,54 @@
             <label for="confirm">
                 <input type="password" id="confirm" name="confirm" placeholder="Re-Enter Password" required>
             </label>
-            <button onclick="sucreg()">SUBMIT</button>
-            <h3>Already Have an Account: <a onclick="login()">login</a></h3>
+            <button type="submit">SUBMIT</button>
+            <h3>Already Have an Account: <a href="javascript:void(0);" onclick="login()">login</a></h3>
         </form>    
+        <h1 style="display: none; font-size: 1px;" id="suc">Registration Successful</h1>
     </div>
     <div style="display: none;" id="logformarea">
         <form>
             <h1>Login</h1>
             <label for="email">
-                <input type="text" id="email" name="email" placeholder="Email" required>
+                <input type="email" id="login-email" name="email" placeholder="Email" required>
             </label>
             <label for="password">
-                <input type="password" id="password" name="password" placeholder="Password" required>
+                <input type="password" id="login-password" name="password" placeholder="Password" required>
             </label>
-            <button>SUBMIT</button>
-            <h3>Do not have an Account: <a onclick="register()">Register</a></h3>
+            <button type="submit" formaction="/index.html">SUBMIT</button>
+            <h3>Do not have an Account: <a href="javascript:void(0);" onclick="register()">Register</a></h3>
         </form>    
     </div>
     
     <script>
+        document.getElementById('regform').addEventListener('submit', function(event) {
+            event.preventDefault(); // Prevent form submission
+
+            const name = document.getElementById('name').value;
+            const email = document.getElementById('email').value;
+            const password = document.getElementById('password').value;
+            const confirm = document.getElementById('confirm').value;
+
+            if (name && email && password && confirm && password === confirm) {
+                // Redirect to index.html
+                window.location.href = '/index.html';
+            } else {
+                alert('Please fill out all fields and ensure passwords match.');
+            }
+        });
+
         function login() {
             regform = document.getElementById("regformarea")
-            console.log(regform.style.display   )
             regform.style.display = "none"
             logform = document.getElementById("logformarea")
             logform.style.display = "flex"
         }
+
         function register() {
             regform = document.getElementById("regformarea")
-            console.log(regform.style.display   )
             regform.style.display = "flex"
             logform = document.getElementById("logformarea")
             logform.style.display = "none"
-        }
-        function sucreg() {
-            
         }
     </script>
 </body>
