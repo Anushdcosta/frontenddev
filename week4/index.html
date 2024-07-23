@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Landing Page</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <h1 class="site-title">Phoenix Corp.</h1>
+            <div class="header-right">
+                <h3>Contact</h3>
+                <h3>About Us</h3>
+                <h3>Pricing</h3>
+                <a href="registration.html" class="login-button">SignUp / Login</a>
+                <div class="box-shadow-menu"></div>
+            </div>
+        </div>
+    </header>
+    <section class="hero">
+        <div class="hero-content">
+            <h1>&lt; Welcome &gt;</h1>
+            <p>It's Time to simplify WEB DEV</p>
+            <div class="button">
+                <a href="#cta" class="cta-button">Get Started</a>
+            </div>
+        </div>
+        <div class="cta-content">
+            <h2>Why Choose Us? {</h2>
+            <p>We deliver cutting-edge solutions that drive success and keep you ahead of the competition. Our dedicated support team is available 24/7 to ensure you get the help you need, whenever you need it.</p>
+            <h2>}</h2>
+        </div>
+    </section>
+    <button  style="width: fit-content;font-size: 28px;border: none;color: white;filter: blur(0px);background: grey;border-radius: 22px;padding: 7px;cursor: pointer;margin-left: 15cm;margin-bottom: 27px;" onclick="displayinfo()">Learn More</button>
+    <section style="display: none; flex-direction: column; align-items: center;" id="appear">
+        <h1 id="hello" style="margin-top: 0px;margin-bottom: 0;font-size: 54px;font-family: auto;">Hello Develepor</h1>
+        <h3>Are you always concerned about the complexity of web developement</h3>
+        <h3>Our Services</h3>
+        <ul>
+            <li><strong>Comprehensive Web Development:</strong> At Phoenix Corp., we assist web developers in creating websites from scratch, ensuring a robust foundation.</li>
+            <li><strong>HTML Code Verification:</strong> Our team meticulously checks websites from scratch using HTML code to guarantee quality and functionality.</li>
+            <li><strong>Expert Guidance:</strong> We provide expert guidance and support throughout the web development process, from initial concept to final deployment.</li>
+            <li><strong>Quality Assurance:</strong> With our thorough code review process, we ensure that every website meets industry standards and best practices.</li>
+            <li><strong>Innovative Solutions:</strong> Phoenix Corp. stays ahead of the curve with the latest web development trends and technologies, delivering innovative solutions.</li>
+            <li><strong>Client-Centric Approach:</strong> We prioritize our clients' needs and tailor our services to meet their specific requirements, ensuring complete satisfaction.</li>
+        </ul>
+    </section>
+    <footer class="footer">
+        <div class="container">
+            &copy; 2024 Phoenix Corp. All rights reserved. Name Literally do not copy
+        </div>
+    </footer>
+    <script>
+        function displayinfo() {
+                hidden_section = document.getElementById("appear");
+                hidden_section.style.display = "flex"
+                window.location.href = "#hello"
+        }
+    </script>
+</body>
+</html>
