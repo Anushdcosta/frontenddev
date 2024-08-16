@@ -1,7 +1,9 @@
 @media (min-width: 767px) {
-html {
+  html {
     scroll-behavior: smooth;
-  }
+    overflow-x: hidden;
+    user-select: none;
+}
   body {
       margin: 0;
       font-family: Arial, sans-serif;

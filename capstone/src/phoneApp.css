@@ -1,6 +1,8 @@
 @media (max-width: 959px) {
     html {
-      scroll-behavior: smooth;
+        scroll-behavior: smooth;
+        overflow-x: hidden;
+        user-select: none;
     }
     body {
         margin: 0;
@@ -96,12 +98,13 @@
       scale: 0.65;
     }
     .header {
-      display: flex;
-      align-items: center;
-      height: 3cm;
-      padding: 20px;
-      background-color: #333;
-      color: white;
+        display: flex;
+        align-items: center;
+        height: 3cm;
+        padding: 20px;
+        width: 30cm;
+        background-color: #333;
+        color: white;
     }
     
     .header h1 {
@@ -359,16 +362,14 @@
         border-radius: 0 30px 30px 0;
         transition: all 1s;
       }
-      .social ul li a {
-        background-color: rgba(0, 0, 0, 0.36);
-      }
       .social ul li:hover {
         transform: translate(4.5cm, 0);
-        background: rgba(255, 255, 255, 0.534);
-      }
-      .social ul li:hover a {
-        color: #000;
-      }
+        /* background: rgba(255, 255, 255, 0.534); */
+    }
+    .social ul li:hover a {
+        color: #fff;
+        text-decoration: none;
+    }
       .social ul li:hover i {
         color: #fff;
         background: rgba(0, 0, 0, 0.36);
