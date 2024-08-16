@@ -20,7 +20,7 @@ function Header() {
         <header className="header">
             <img src="me.jpg" alt='Anush Dcosta' id='myimg'/>
             <h1>Anush Dcosta</h1>
-            <div>
+            <div id='laptopmenu'>
                 <nav>
                     <ul>
                         <li><a href="#about">About Me</a></li>
@@ -29,6 +29,9 @@ function Header() {
                         <li><a href="#contact">Contact</a></li>
                     </ul>
                 </nav>
+            </div>
+            <div id='phonemenu'>
+                
             </div>
         </header>
     );

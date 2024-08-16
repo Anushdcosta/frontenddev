@@ -23,7 +23,7 @@ function Contact() {
                 <textarea name="message" placeholder="Your Message" value={formData.message} onChange={handleInputChange} required />
                 <button type="submit">Send</button>
             </form>
-            <div className="social-links">
+            <div className="social-links laptop">
                 <a href="https://www.linkedin.com/in/anush-dcosta-7865b8291/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
                 <a href="https://github.com/Anushdcosta" target="_blank" rel="noopener noreferrer">GitHub</a>
             </div>
