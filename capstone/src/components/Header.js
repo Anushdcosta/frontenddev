@@ -1,4 +1,5 @@
 import React from 'react';
+import Phonemenu from './PhoneMenu';
 
 function Header() {
     document.addEventListener('DOMContentLoaded', function () {
@@ -18,7 +19,9 @@ function Header() {
 
     return (
         <header className="header">
-            <img src="me.jpg" alt='Anush Dcosta' id='myimg'/>
+            <div id='image'>
+                <img src="me.jpg" alt='Anush Dcosta' id='myimg'/>
+            </div>
             <h1>Anush Dcosta</h1>
             <div id='laptopmenu'>
                 <nav>
@@ -30,9 +33,7 @@ function Header() {
                     </ul>
                 </nav>
             </div>
-            <div id='phonemenu'>
-                
-            </div>
+            <Phonemenu />
         </header>
     );
 }
